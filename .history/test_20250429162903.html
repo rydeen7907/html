@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運営者お気に入りの動画リンク</title>
+    
+        .video-frame {
+            flex:1;
+        }
+        
+        .video-flame iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: none;
+            border-radius: 5px;    
+        }
+
+        .video-info{
+            flex: 1;
+            text-align: left;
+            }
+
+        .video-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .video-description {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 600px) {
+            .video-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .video-frame, .video-info {
+                flex: none;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .video-info{
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>管理人おススメ動画</h1>
+</header>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="video-title">メイン動画のタイトル</div>
+<div class="video-description">この動画の説明文です。</div>
+
+</body>
+</html>

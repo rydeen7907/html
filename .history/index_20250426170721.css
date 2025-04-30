@@ -1,0 +1,69 @@
+/* 基本的なスタイル */
+body {  
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* 行間を読みやすく調整 */
+    margin: 0; /* ブラウザデフォルトのマージンをリセット */
+    padding: 0; /* ブラウザデフォルトのパディングをリセット */
+    background-color: #f4f4f4; /* 背景色を薄いグレーに設定 */
+    color: #333; /* 文字色を濃いグレーに設定 */
+    padding-bottom: 50px; /* ページ下部のパディングを追加 */
+}
+
+/* ヘッダーのスタイル */ 
+.header-image {
+    width: 100%;
+    /* max-width: auto; は width: 100%; があれば不要 */
+    height: 400px;
+    display: block; /* 中央配置のためブロック要素に */
+    margin: 0 auto; /* 上下のマージンは０、左右は自動で中央揃え */
+    object-fit: cover; /* 画像のアスペクト比を維持、要素に合わせる */
+}
+
+/* 画像の説明文 */  
+.image-caption {
+    text-align: right; /* 右寄せ */
+    font-size: 14px; /* フォントサイズを小さく */
+    padding: 5px 15px; /* 上下のパディングと左右のパディングを追加 */
+    color: #555; /* 文字色を薄いグレーに */
+    margin-top:\ 5px; /* 上部のマージンを追加 */
+    margin-bottom: 25px; /* 下部のマージンを追加 */
+}
+
+/* メインコンテンツのスタイル */ 
+.h1 {
+    text-align: center; /* 中央配置 */
+    color: #333; /* 文字色を濃いグレーに */
+    margin: 20px 0; /* 上下のマージンを追加 */
+    margin-top: 40px; /* 上部のマージンを追加 */
+    margin-bottom: 20px; /* 下部のマージンを追加 */
+    font-size: 28px; /* フォントサイズ */
+    font-weight: bold; /* 太字に設定 */ 
+}
+
+/* 段落 p */
+p {
+    text-align: center; /* 中央配置 */
+    margin-top: 15px; /* 上下のマージンを追加 */
+    margin-bottom: 15px;
+    font-size: 16px; /* フォントサイズ */
+}
+
+/* リンク a */
+a {
+    text-decoration: none; /* 下線を削除 */
+    color: #ff0000; /* 文字色を赤に */
+    display: block;
+    text-align: left; /* 左寄せ */
+    margin-top: 10px; /* 上部のマージンを追加 */
+    margin-bottom: 10px; /* 下部のマージンを追加 */
+    font-size: 16px; /* フォントサイズ */
+    font-weight: bold; /* 太字に設定 */
+    transition: color 0.3s; /* ホバー時の色変更にトランジションを追加 */
+}
+
+/* ホバー時のスタイル */
+a:hover,
+a:focus { /* ホバーとフォーカス時に適用するスタイル */
+    text-decoration: underline; 
+    color: #ff8000; /* ホバー時の文字色をオレンジに変更 */
+}

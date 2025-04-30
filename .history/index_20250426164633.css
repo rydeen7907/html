@@ -1,0 +1,29 @@
+/* 基本的なスタイル */
+body {  
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* 行間を読みやすく調整 */
+    margin: 0; /* ブラウザデフォルトの
+    padding: 0;
+    background-color: #f4f4f4;  
+    color: #333;
+    padding-bottom: 20px;
+}
+
+/* ヘッダーのスタイル */ 
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;    
+}
+
+/* 画像の説明文 */  
+.image-caption {
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 15px;
+    color: #555;
+    margin-top:\ 5px;
+    margin-bottom: 25px;
+}

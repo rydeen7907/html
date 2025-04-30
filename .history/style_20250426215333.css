@@ -1,0 +1,122 @@
+/* 基本スタイル */
+:root {
+    /* 色の設定 */
+    --text-color-dark: #333; /*  */
+    --text-color-light: #555; /*  */
+    --background-color: #f4f4f4; /*  */
+    --background-color-scroll: aqua; /*  */
+    --link-color: #ff0000; /* リンクの色 */
+    --link-color-hover: #ff8000; /* ホバー時のリンク色 */
+
+/* タイポグラフィ */
+    --font-fam
+    font-size: 16px; /* フォントサイズ */
+    font-weight: bold; /* 太字に設定 */
+}
+body {  
+    font-family: Arial, sans-serif;
+    line-height: 2.0; /* 行間を読みやすく調整 (例：2.0倍 px,%,emでも可能) */
+    margin: 0; /* ブラウザデフォルトのマージンをリセット */
+    padding: 0; /* ブラウザデフォルトのパディングをリセット */
+    background-color: #f4f4f4; /* 背景色を薄いグレーに設定 */
+    color: #333; /* 文字色を濃いグレーに設定 */
+    padding-bottom: 50px; /* ページ下部のパディングを追加 */
+}
+
+/* ヘッダーのスタイル */ 
+.header-image {
+    width: 100%;
+    /* max-width: auto; は width: 100%; があれば不要 */
+    height: 400px;
+    display: block; /* 中央配置のためブロック要素に */
+    margin: 0 auto; /* 上下のマージンは０、左右は自動で中央揃え */
+    object-fit: cover; /* 画像のアスペクト比を維持、要素に合わせる */
+}
+
+/* 画像の説明文 */  
+.image-caption {
+    text-align: right; /* 右寄せ */
+    font-size: 14px; /* フォントサイズを小さく */
+    padding: 5px 15px; /* 上下のパディングと左右のパディングを追加 */
+    color: #555; /* 文字色を薄いグレーに */
+    margin-top:\ 5px; /* 上部のマージンを追加 */
+    margin-bottom: 25px; /* 下部のマージンを追加 */
+}
+
+/* メインコンテンツのスタイル */ 
+.h1 {
+    text-align: center; /* 中央配置 */
+    color: #333; /* 文字色を濃いグレーに */
+    margin: 20px 0; /* 上下のマージンを追加 */
+    margin-top: 40px; /* 上部のマージンを追加 */
+    margin-bottom: 20px; /* 下部のマージンを追加 */
+    font-size: 28px; /* フォントサイズ */
+    font-weight: bold; /* 太字に設定 */ 
+}
+
+/* スクロールテキストコンテナ */
+.scrolling-text-container {
+    width: 100%; /* 幅を100%に設定 */
+    height: 65px; /* 高さを50pxに設定 */
+    overflow: hidden; /* はみ出た部分を隠す */
+    background-color: aqua; /* 背景色をアクアに設定 */
+    /*padding: 10px, 10px; /* 上下のパディングを追加 */
+    padding-top: 5px; /* 上部のパディングを追加 */
+    padding-bottom: 10px; /* 下部のパディングを追加 */
+    /*padding-left: 10px; /* 左側のパディングを追加 */
+    /*padding-right: 10px; /* 右側のパディングを追加 */
+    box-sizing: border-box; /* パディングとボーダーを含めたサイズ計算 */
+    margin-bottom: 40px; /* 下部のマージンを追加 */
+}
+
+/* スクロールテキスト */
+.scrolling-text {
+    display: inline-block; /* インラインブロック要素に設定 */
+    white-space: nowrap; /* 文字を折り返さない */
+    padding-left: 100%; /* 左側にパディングを追加 */
+    animation: scroll-left 25s linear infinite; /* アニメーションを適用 */
+    font-size: 24px; /* フォントサイズ */
+    font-weight: bold; /* 太字に設定 */
+    margin: 0; /* コンテナ内でのマージンを削除 */
+    color: #333; /* 文字色を濃いグレーに */
+}
+
+/* スクロールアニメーションの定義 */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* 開始位置 */
+    }
+    100% {
+        /* テキスト自身の幅だけ左に移動させる */
+        transform: translateX(-150%);
+    }
+}
+
+
+/* 段落 p */
+p {
+    text-align: center; /* 中央配置 */
+    margin-top: 25px; /* 上下のマージンを追加 */
+    margin-bottom: 25px;
+    font-size: 16px; /* フォントサイズ */
+}
+
+/* リンク a */
+a {
+    text-decoration: none; /* 下線を削除 */
+    color: #ff0000; /* 文字色を赤に */
+    display: block;
+    text-align: center; /* 左寄せ */
+    margin-top: 10px; /* 上部のマージンを追加 */
+    margin-bottom: 10px; /* 下部のマージンを追加 */
+    font-size: 16px; /* フォントサイズ */
+    font-weight: bold; /* 太字に設定 */
+    transition: color 0.3s; /* ホバー時の色変更にトランジションを追加 */
+}
+
+/* ホバー時のスタイル */
+a:hover,
+a:focus { /* ホバーとフォーカス時に適用するスタイル */
+    text-decoration: underline; /* 下線を追加 */
+    color: #ff8000; /* ホバー時の文字色をオレンジに変更 */
+}
