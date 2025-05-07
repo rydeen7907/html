@@ -345,7 +345,7 @@ a:focus { /* ホバーとフォーカス時に適用するスタイル */
     top: 20px; /* 上からの位置 */
     right: 20px;
     width: 200px; /* 画像の幅 */
-    text-align: center; /* 画像とコメントを中央揃え */
+    /* text-align: center; /* 画像とコメントを中央揃え */
 }
 
 .profile-image {
