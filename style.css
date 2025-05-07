@@ -334,32 +334,33 @@ a:focus { /* ホバーとフォーカス時に適用するスタイル */
 /* プロフィール(画像)のスタイル */
 .profile-container{
     overflow: hidden; /* floatした要素の高さを親要素が認識できるようにする */
-    position: relative; /* 子要素の絶対位置を基準にするために相対位置を指定 */
+    /* position: relative; /* 子要素の絶対位置を基準にするために相対位置を指定 */
     margin-bottom: 20px; /* フッターとの間にスペースを確保 */
     padding-top: 20px; /* コンテナ上部の余白 */
+    min-height: 300px;
 }
 
 .profile-image-section {
-    position: absolute; /* 絶対位置を指定 */
+    /* position: absolute; /* 絶対位置を指定 */
     top: 20px; /* 上からの位置 */
     right: 20px;
     width: 200px; /* 画像の幅 */
-    text-align: center; /* 画像とコメントを中央揃え */
+    /* text-align: center; /* 画像とコメントを中央揃え */
 }
 
 .profile-image {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 20px; /* 上下のマージンは０、左右は自動で中央揃え */
-    border: 1px solid #ccc; /* 画像の周りに薄いグレーのボーダーを追加 */
+    margin: 0 auto ; /* 上下のマージンは０、左右は自動で中央揃え */
+    border: 5px solid #ccc; /* 画像の周りに薄いグレーのボーダーを追加 */
     padding: 5px; /* 画像の周りにパディングを追加 */
 }
 
 .image-comment {
     font-size: var(--font-size-small); /* フォントサイズを小さく */
     color: var(--text-color-light); /* 文字色を薄いグレーに */
-    /*text-align: center; /* 中央揃え */
+    text-align: center; /* 中央揃え */
     margin-top: 10px; /* 上部のマージンを追加 */
 }
 
