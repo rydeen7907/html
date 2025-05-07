@@ -361,7 +361,7 @@ a:focus { /* ホバーとフォーカス時に適用するスタイル */
     font-size: var(--font-size-small); /* フォントサイズを小さく */
     color: var(--text-color-light); /* 文字色を薄いグレーに */
     text-align: center; /* 中央揃え */
-    margin-top: 5px; /* 上部のマージンを追加 */
+    margin-top: 5%; /* 上部のマージンを追加 */
 }
 
 .profile-text-section {
