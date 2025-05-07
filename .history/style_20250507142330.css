@@ -352,8 +352,8 @@ a:focus { /* ホバーとフォーカス時に適用するスタイル */
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 10px; /* 上下のマージンは０、左右は自動で中央揃え */
-    border: 1 solid #ccc; /* 画像の周りに薄いグレーのボーダーを追加 */
+    margin: 0 auto ; /* 上下のマージンは０、左右は自動で中央揃え */
+    border: 1cap solid #ccc; /* 画像の周りに薄いグレーのボーダーを追加 */
     padding: 5px; /* 画像の周りにパディングを追加 */
 }
 
