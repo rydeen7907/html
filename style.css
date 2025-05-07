@@ -62,7 +62,7 @@ body {
 
 /* 画像キャプション内のリンク */
 .image-caption a {
-    color: inherit; /* リンクの色 */
+    color: blue; /* リンクの色 */
     text-align: right;
     text-decoration: none; /* 下線を削除 */
 }
@@ -125,6 +125,7 @@ main h2 {
 /* リンクリストのスタイル */
 main .link-list {
     list-style: none;
+    color: BLUE;
     padding-left: 0;
     margin-left: var(--margin-s);    
     text-align: left;
@@ -176,7 +177,7 @@ main p{
 /* リンク a */
 a {
     display: block;
-    color: var(--link-color); /* 文字色を赤に */
+    color: BLUE; /* 文字色を青に */
     margin: var(--margin-s) auto; /* 上部のマージンを追加 */
     font-size: var(--font-size-base); /* フォントサイズ */
     font-weight: bold; /* 太字に設定 */
@@ -244,7 +245,7 @@ a:focus { /* ホバーとフォーカス時に適用するスタイル */
     opacity: 0.7; /* ホバー時の透明度を変更 */
 }   
 
-/* 動画コンテナのスタイル*/
+/* おススメ動画のスタイル*/
 .video-item {
     display: flex;
     align-items: flex-start;
@@ -327,5 +328,64 @@ a:focus { /* ホバーとフォーカス時に適用するスタイル */
 
     .video-description {
         font-size: 10px;
+    }
+}
+
+/* プロフィール(画像)のスタイル */
+.profile-container{
+    overflow: hidden; /* floatした要素の高さを親要素が認識できるようにする */
+    position: relative; /* 子要素の絶対位置を基準にするために相対位置を指定 */
+    margin-bottom: 20px; /* フッターとの間にスペースを確保 */
+    padding-top: 20px; /* コンテナ上部の余白 */
+}
+
+.profile-image-section {
+    position: absolute; /* 絶対位置を指定 */
+    top: 20px; /* 上からの位置 */
+    right: 20px;
+    width: 200px; /* 画像の幅 */
+    text-align: center; /* 画像とコメントを中央揃え */
+}
+
+.profile-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* 上下のマージンは０、左右は自動で中央揃え */
+    border: 1px solid #ccc; /* 画像の周りに薄いグレーのボーダーを追加 */
+    padding: 5px; /* 画像の周りにパディングを追加 */
+}
+
+.image-comment {
+    font-size: var(--font-size-small); /* フォントサイズを小さく */
+    color: var(--text-color-light); /* 文字色を薄いグレーに */
+    /*text-align: center; /* 中央揃え */
+    margin-top: 10px; /* 上部のマージンを追加 */
+}
+
+.profile-text-section {
+    margin-right: 220px; /* 画像の幅と同じだけ右にマージンを追加 */
+}
+
+/* float解除 */
+.profile-footer { /* profole.htmlのフッター専用のクラス*/
+    clear: both;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 640px) {
+    .profile-container {
+        padding-top: 0; /* 小画面では上部パディングをリセット */
+    }
+
+    .profile-image-section {
+        position: static; /* スクロールに合わせて動くようにする */
+        width: 100%; /* 幅を調整 */
+        margin: 0 auto 20px; /* 中央揃えと下の要素とのスペース */
+    }
+
+    .profile-text-section {
+        margin-right: 0; /* マージンを削除 */
+        width: 100%; /* 幅を調整 */
     }
 }
