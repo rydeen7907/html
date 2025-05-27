@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Photographs</h1>
+</header>
+
+<!-- 画像グリッド表示 -->
+<div class="photo-grid">
+  <img src="./image/photo/IMG_20250512_165052_222.jpg" alt="瀬戸大橋：坂出市両景橋から撮影" class="enlargeable-image">
+  <img src="./image/photo/IMG_20250512_205517_462.jpg" alt="サンプル画像2" class="enlargeable-image">
+  <img src="./image/photo/.jpg" alt="サンプル画像3" class="enlargeable-image">
+  <img src="./image/sample4.jpg" alt="Comming Soon" class="enlargeable-image">
+  <img src="./image/sample5.jpg" alt="Comming Soon" class="enlargeable-image">
+  <img src="./image/sample6.jpg" alt="Comming Soon" class="enlargeable-image">
+</div>
+<!-- モーダルウィンドウ -->
+<div class="image-modal" id="imageModal">
+  <button class="close-modal" id="closeModalBtn">×</button>
+  <img src="" alt="拡大画像" id="modalImg">
+</div>
+<script>
+  // すべての拡大可能画像に対応
+  const enlargeableImgs = document.querySelectorAll('.enlargeable-image');
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.getElementById('closeModalBtn');
+  enlargeableImgs.forEach(function(img) {
+    img.addEventListener('click', function() {
+      modal.classList.add('active');
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    });
+  });
+  closeBtn.addEventListener('click', function() {
+    modal.classList.remove('active');
+    modalImg.src = '';
+  });
+  // モーダル背景クリックで閉じる
+  modal.addEventListener('click', function(e) {
+    if(e.target === modal) {
+      modal.classList.remove('active');
+      modalImg.src = '';
+    }
+  });
+</script>
+
+<!-- 画像の説明文 -->
+
+<footer class="social-links">
+    <p>&copy; 2025 だらっくま</p>
+    <a href="index.html">&laquo; メインページに戻る</a>
+</footer>
+
+</body>
+</html>
