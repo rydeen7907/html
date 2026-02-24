@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>photo</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .modal-caption {
+            position: absolute;
+            top: 20px;
+            right: 70px; /* 閉じるボタンの左側に配置 */
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0,0,0,0.8); /* 背景が白くても読めるように影を追加 */
+            pointer-events: none; /* クリックを透過させる */
+        }
+    </style>
 </head>
 <body>
 
@@ -15,6 +27,8 @@
 
 <!-- 画像グリッド表示 -->
 <div class="photo-grid">
+  <img src="./image/photo/IMG_2026-02-01-10-30-50-465.jpg" alt="南海2200系 天空" class="enlargeable-image">
+  <img src="./image/photo/IMG_2026-02-01-11-47-52-836.jpg" alt="南海高野線の秘境駅 紀伊神谷駅" class="enlargeable-image">
   <img src="./image/photo/IMG_20250512_165052_222.jpg" alt="飲むフリスク・グレープ味" class="enlargeable-image">
   <img src="./image/photo/IMG_20250512_205517_462.jpg" alt="ウッドパズル" class="enlargeable-image">
   <img src="./image/photo/IMG_20230921_091010_522.jpg" alt="西成のイミフ看板" class="enlargeable-image">
@@ -25,6 +39,7 @@
 <!-- モーダルウィンドウ -->
 <div class="image-modal" id="imageModal">
   <button class="close-modal" id="closeModalBtn">×</button>
+  <div id="modalCaption" class="modal-caption"></div>
   <img src="" alt="拡大画像" id="modalImg">
 </div>
 <script>
@@ -32,12 +47,14 @@
   const enlargeableImgs = document.querySelectorAll('.enlargeable-image');
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImg');
+  const modalCaption = document.getElementById('modalCaption');
   const closeBtn = document.getElementById('closeModalBtn');
   enlargeableImgs.forEach(function(img) {
     img.addEventListener('click', function() {
       modal.classList.add('active');
       modalImg.src = this.src;
       modalImg.alt = this.alt;
+      modalCaption.textContent = this.alt;
     });
   });
   closeBtn.addEventListener('click', function() {
