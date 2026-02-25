@@ -341,8 +341,8 @@ a:focus { /* ホバーとフォーカス時に適用するスタイル */
 
 .profile-image-section {
     position: absolute; /* 絶対位置を指定 */
-    top: 10px; /* 上からの位置 */
-    right: 15px;
+    top: 30px; /* 上からの位置 */
+    right: 50px;
     width: 200px; /* 画像の幅 */
     text-align: center; /* 画像とコメントを中央揃え */
 }

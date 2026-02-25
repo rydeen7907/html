@@ -6,15 +6,26 @@
     <title>photo</title>
     <link rel="stylesheet" href="style.css">
     <style> /* モーダルウィンドウのスタイル */
+        .modal-content {
+            display: flex;       /* 横並びにする */
+            align-items: left; /* 垂直方向左揃え */
+            justify-content: center;
+            pointer-events: none; /* 背景クリックで閉じる動作を妨げないようにする */
+        }
         .modal-caption {
-            position: absolute;
-            top: 20px;
-            right: 70px; /* 閉じるボタンの左側に配置 */
+            margin-top: 50px;   /* 画像とキャプションの間隔 */
+            margin-left: 50px; /* 画像との左間隔 */
+            text-align: left;  /* 左寄せ */
             color: #fff;
             font-size: 1.2rem;
             font-weight: bold;
             text-shadow: 0 0 5px rgba(0,0,0,0.8); /* 背景が白くても読めるように影を追加 */
-            pointer-events: none; /* クリックを透過させる */
+            pointer-events: auto; /* テキスト選択などを可能にする */
+        }
+        #modalImg {
+            pointer-events: auto; /* 画像の操作を可能にする */
+            max-width: 60vw;      /* 画像とテキストが並ぶように幅を少し制限 */
+            max-height: 80vh;
         }
     </style>
 </head>
@@ -29,16 +40,18 @@
 <div class="photo-grid">
   <img src="./image/photo/IMG_2026-02-01-10-30-50-465.jpg" alt="南海2200系 天空" class="enlargeable-image">
   <img src="./image/photo/IMG_2026-02-01-11-47-52-836.jpg" alt="南海高野線の秘境駅 紀伊神谷駅" class="enlargeable-image">
-  <img src="./image/photo/IMG_20230921_091010_522.jpg" alt="西成のイミフ看板" class="enlargeable-image">
+  <img src="./image/photo/IMG_20230921_091010_522.jpg" alt="西成のイミフな看板" class="enlargeable-image">
   <img src="./image/photo/IMG_20240629_164033_269.jpg" alt="南海なんば駅・秘密の扉" class="enlargeable-image">
-  <img src="./image/photo/IMG_20240903_164929_392.jpg" alt="喜多方焼豚ラーメン" class="enlargeable-image">
+  <img src="./image/photo/IMG_20240903_164929_392.jpg" alt="喜多方ラーメン坂内の焼豚ラーメン" class="enlargeable-image">
   <img src="./image/photo/IMG_20250220_112410_191.jpg" alt="ケロちゃん・コロちゃん" class="enlargeable-image">
 </div>
 <!-- モーダルウィンドウ -->
 <div class="image-modal" id="imageModal">
   <button class="close-modal" id="closeModalBtn">×</button>
-  <div id="modalCaption" class="modal-caption"></div>
-  <img src="" alt="拡大画像" id="modalImg">
+  <div class="modal-content">
+    <img src="" alt="拡大画像" id="modalImg">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
 </div>
 <script>
   // すべての拡大可能画像に対応
